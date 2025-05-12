@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #e9d5e9 0%, #ffffff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem; 
+}
+
+
+.landing-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px; 
+    width: 100%; 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.landing-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50; 
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+
+.landing-main h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #34495e; 
+    margin-bottom: 2rem;
+}
+
+.navigation-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; 
+    flex-wrap: wrap; 
+}
+
+.nav-button {
+    display: inline-flex; 
+    align-items: center;
+    gap: 0.75rem; 
+    padding: 1rem 2rem;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button .icon {
+    width: 24px; 
+    height: 24px;
+}
+
+
+.cadastro-button {
+    background: linear-gradient(45deg, #e787f1, #c5cfdd); 
+}
+
+.cadastro-button:hover {
+    transform: translateY(-5px) scale(1.03); 
+    box-shadow: 0 10px 20px rgba(54, 209, 220, 0.4);
+    background: linear-gradient(45deg, #c5cfdd, #e787f1); 
+}
+
+
+.visualizacao-button {
+    background: linear-gradient(45deg, #c5c2e2, #c594db); 
+}
+
+.visualizacao-button:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(254, 180, 123, 0.4);
+    background: linear-gradient(45deg, #c594db, #c5c2e2);
+}
+
+
+@media (max-width: 768px) {
+    .landing-header h1 {
+        font-size: 2.2rem;
+    }
+    .landing-header .subtitle {
+        font-size: 1rem;
+    }
+    .landing-main h2 {
+        font-size: 1.3rem;
+    }
+    .navigation-options {
+        flex-direction: column;
+        align-items: center; 
+        gap: 1rem;
+    }
+    .nav-button {
+        width: 80%; 
+        justify-content: center; 
+        padding: 0.9rem 1.5rem;
+    }
+    .landing-container {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-header h1 {
+        font-size: 1.8rem;
+    }
+
+     .nav-button {
+        width: 95%; 
+        font-size: 0.9rem;
+    }
+}
